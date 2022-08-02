@@ -1,34 +1,36 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import "./App.css";
+import { COUNTRYS_PHONE } from "./data/countrys-phone";
+import "./styles/home.css";
 
-function App() {
-  const [count, setCount] = useState(0);
+const App = () => {
+  const [phone, setPhone] = useState("");
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="section--message">
+      <h1>Chatea por WhastApp</h1>
+      <h5>Sin agregar contactos</h5>
+
+      <div className="section--input">
+        <select name="" id="">
+          <option value="">Selecciona un país</option>
+          {COUNTRYS_PHONE.map((country) => (
+            <option key={country.code} value={country.dial_code}>
+              {`${country.emoji} - ${country.name} (${country.dial_code})`}
+            </option>
+          ))}
+        </select>
+
+        <input
+          type="text"
+          placeholder="Número de teléfono"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <a>Click me!</a>
     </div>
   );
-}
+};
 
 export default App;

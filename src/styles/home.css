@@ -1,0 +1,24 @@
+.section--message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section--input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section--input input {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #f9f9f9;
+  color: black;
+  transition: border-color 0.25s;
+}
