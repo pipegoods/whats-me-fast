@@ -3,7 +3,14 @@ const Footer = () => (
     <div className="container">
       <div className="content has-text-centered">
         <p>
-          Pronto mas funcionalidad
+          Desarrollo de practica con react y typescript{" "}
+          <a
+            href="https://github.com/pipegoods/whats-me-fast"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Github
+          </a>
           <svg
             viewBox="0 0 72 72"
             width={16}

@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import CountryInput from "./components/CountryInput";
 import Footer from "./components/Footer";
+import HistoryPhones from "./components/HistoryPhones";
 import { API_WHASTAPP_URL } from "./config";
+import { HistoryContext } from "./context/history.context";
 import { COUNTRYS_PHONE, COUNTRY_CO } from "./data/countrys-phone";
 import "./styles/home.css";
 
 const App = () => {
   const [phone, setPhone] = useState("");
   const [code, setCode] = useState(COUNTRY_CO.dial_code);
+  const { addHistory } = useContext(HistoryContext);
 
   const onChangePhone = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPhone(event.target.value);
@@ -38,11 +41,14 @@ const App = () => {
           href={API_WHASTAPP_URL + code.slice(1) + phone}
           target="_blank"
           rel="noreferrer"
+          onClick={() => addHistory(code.slice(1) + phone)}
           style={{ display: phone.length === 10 ? "block" : "none" }}
         >
           Abrir Chat
         </a>
       </div>
+
+      <HistoryPhones />
 
       <Footer />
     </div>

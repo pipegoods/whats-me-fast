@@ -1,4 +1,4 @@
-import { CountryFlag } from "../types/CountryFlag.type";
+import { CountryFlag } from "../types/CountryFlag";
 
 export const COUNTRY_CO: CountryFlag = {
   name: "Colombia",

@@ -67,4 +67,29 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+
+  .country--input {
+    background-color: #f9f9f9;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2.4em;
+  }
+  button {
+    padding: 0.4em 1em;
+  }
+
+  .section--message {
+    max-width: 320px;
+  }
+
+  .section--input {
+    min-width: 100%;
+  }
+
+  .country--input {
+    width: 100%;
+  }
 }
