@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from "react";
-import { CountryFlag } from "../types/CountryFlag.type";
+import { CountryFlag } from "../types/CountryFlag";
 import "../styles/CountryInput.css";
 import { COUNTRY_CO } from "../data/countrys-phone";
 
