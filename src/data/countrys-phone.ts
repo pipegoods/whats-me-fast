@@ -1,4 +1,16 @@
-export const COUNTRYS_PHONE = [
+import { CountryFlag } from "../types/CountryFlag.type";
+
+export const COUNTRY_CO: CountryFlag = {
+  name: "Colombia",
+  dial_code: "+57",
+  code: "CO",
+  emoji: "🇨🇴",
+  image:
+    "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CO.svg",
+  unicode: "U+1F1E8 U+1F1F4",
+};
+
+export const COUNTRYS_PHONE: CountryFlag[] = [
   {
     name: "Afghanistan",
     dial_code: "+93",
